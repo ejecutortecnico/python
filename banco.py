@@ -6,6 +6,28 @@ saldos = []
 global opcion
 opcion = 100
 
+def editar():
+    print("ingrese el nombre del cliente a editar")
+    nombre = input()
+    for i in range(len(nombres)):
+        if nombres[i] == nombre:
+            nombres.remove(nombre)
+            apellidos.remove(apellidos[i])
+            edades.remove(edades[i])
+            telefonos.remove(telefonos[i])
+            saldos.remove(saldos[i])
+
+def borrar():
+    print("ingrese el nombre a borrar")
+    nombre = input()
+    for i in range(len(nombres)):
+        if nombres[i] == nombre:
+            nombres.remove(nombre)
+            apellidos.remove(apellidos[i])
+            edades.remove(edades[i])
+            telefonos.remove(telefonos[i])
+            saldos.remove(saldos[i])
+
 def inicio():
     print("Banco de TalentoTech")
     print("ingrese 1 para agregar clientes")
@@ -36,8 +58,10 @@ def inicio():
             print(f"nombres: {nombres[i]} {apellidos[i]} Saldo: {saldos[i]}")
     elif opcion == 3:
         print("eligio la opcion 3")
+        borrar()
     elif opcion == 4:
         print("eligio la opcion 4")
+        editar()
     elif opcion == 0:
         return opcion
     else:
