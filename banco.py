@@ -14,7 +14,6 @@ def inicio():
     print("ingrese 4 para editar clientes")
     print("ingrese 0 para Salir")
     opcion = int(input("ingrese la opcion"))
-
     if opcion == 1:
         print("Ingrese el nombre")
         nombre = input()
@@ -33,6 +32,8 @@ def inicio():
         saldos.append(saldo)
     elif opcion == 2:
         print("eligio la opcion 2")
+        for i in range(len(nombres)):
+            print(f"nombres: {nombres[i]} {apellidos[i]} Saldo: {saldos[i]}")
     elif opcion == 3:
         print("eligio la opcion 3")
     elif opcion == 4:
@@ -41,7 +42,6 @@ def inicio():
         return opcion
     else:
         print("no eligio una opcion valida")
-
 
 while True:
     opcion = inicio()
