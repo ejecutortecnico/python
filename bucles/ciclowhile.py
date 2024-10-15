@@ -1,14 +1,9 @@
-
-tamano = input("ingrese el tamaño de la lista")
+tamano = int(input("Ingrese el tamaño de la lista"))
 lista = []
-for i in range(int(tamano)):
-    print(f'el valor a ingreser es: {i} ')
-    valor = input()
+i=0
+while tamano != 0:
+    i+=1
+    valor = input(f"ingrese el elemento {i} de la lista ")
     lista.append(valor)
+    tamano-=1
 print(lista)
-
-# Bucle While
-contador = 0
-while contador < 5:
-    print(contador)
-    contador += 1

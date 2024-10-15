@@ -1,8 +1,7 @@
-
-tamano = input("ingrese el tamaño de la lista")
+tamano = input("Ingrese el tamaño de la lista")
 lista = []
 for i in range(int(tamano)):
-    print(f'el valor a ingreser es: {i} ')
-    valor = input()
+    valor = input(f"ingrese el elemento {i + 1} de la lista ")
     lista.append(valor)
 print(lista)
+
