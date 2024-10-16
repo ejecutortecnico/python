@@ -5,6 +5,8 @@ telefonos = []
 saldos = []
 global opcion
 opcion = 100
+clientes = []
+cliente = {}
 
 def editar():
     print("ingrese el nombre del cliente a editar")
@@ -39,23 +41,25 @@ def inicio():
     if opcion == 1:
         print("Ingrese el nombre")
         nombre = input()
-        nombres.append(nombre)
+        cliente["nombre"] = nombre
         print("Ingrese el Apellido")
         apellido = input()
-        apellidos.append(apellido)
+        cliente["apellido"] = apellido
         print("Ingrese la edad")
         edad = input()
-        edades.append(edad)
+        cliente["edad"] = edad
         print("Ingrese el telefono")
         telefono = input()
-        telefonos.append(telefono)
+        cliente["telefono"] = telefono
         print("Ingrese el saldo")
         saldo = input()
-        saldos.append(saldo)
+        cliente["saldo"] = saldo
+        clientes.append(cliente)
     elif opcion == 2:
         print("eligio la opcion 2")
-        for i in range(len(nombres)):
-            print(f"nombres: {nombres[i]} {apellidos[i]} Saldo: {saldos[i]}")
+        for i in range(len(clientes)):
+            print(clientes[i])
+            #print(f"nombres: {nombres[i]} {apellidos[i]} Saldo: {saldos[i]}")
     elif opcion == 3:
         print("eligio la opcion 3")
         borrar()
