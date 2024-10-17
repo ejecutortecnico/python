@@ -1,8 +1,4 @@
-lista = []
+import pandas as pd
 
-
-for i in range(5):
-    valor = input()
-    lista[i] = i
-
-print[lista]
+df = pd.Series([1,2,3,4,5])
+print(df)
